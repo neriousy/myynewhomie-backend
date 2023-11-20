@@ -1,0 +1,99 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.1'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.liquibase:liquibase-core'
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+// https://mvnrepository.com/artifact/com.github.javafaker/javafaker
+	implementation 'com.github.javafaker:javafaker:1.0.2'
+
+	//Email validator
+	// https://mvnrepository.com/artifact/commons-validator/commons-validator
+	implementation group: 'commons-validator', name: 'commons-validator', version: '1.7'
+
+
+
+	//Java Mail Sender
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mail
+	implementation 'org.springframework.boot:spring-boot-starter-mail:3.0.4'
+	implementation group: 'jakarta.mail', name: 'jakarta.mail-api', version: '2.1.0'
+	// https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf
+	implementation 'org.thymeleaf:thymeleaf:3.0.15.RELEASE'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:3.0.4'
+
+	//Hibernate Type 52
+	// https://mvnrepository.com/artifact/com.vladmihalcea/hibernate-types-52
+	//implementation 'com.vladmihalcea:hibernate-types-52:2.20.0'
+
+	//Web Sockets for Spring
+	// https://mvnrepository.com/artifact/org.springframework/spring-websocket
+	implementation 'org.springframework:spring-websocket:6.0.3'
+
+	// https://mvnrepository.com/artifact/org.springframework/spring-messaging
+	implementation 'org.springframework:spring-messaging:6.0.6'
+
+	//Swagger Extensions
+	// https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations
+//	implementation group: 'io.swagger.core.v3', name: 'swagger-annotations', version: '2.2.8'
+	implementation 'io.springfox:springfox-swagger2:2.9.2'
+
+	implementation 'com.google.code.gson:gson:2.8.9'
+
+	// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+	implementation 'org.apache.httpcomponents:httpclient:4.5'
+
+	// https://mvnrepository.com/artifact/org.json/json
+	implementation 'org.json:json:20090211'
+
+
+
+
+
+
+
+
+
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'org.postgresql:postgresql'
+	implementation 'org.jetbrains:annotations:23.0.0'
+
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
+
+
+	annotationProcessor 'org.projectlombok:lombok'
+
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

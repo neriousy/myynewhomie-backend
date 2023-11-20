@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+
+
+    <include file="/tables/user/user-1.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/user/user-2.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/messages/messages-1.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/messages/messages-3.sql" relativeToChangelogFile="true"/>
+
+    <include file="/tables/comments/comments-1.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/comments/comments-2.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/flat/flat-1.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/flat/flat-2.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/flat/flat-3.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/housing_confirmation/housing-1.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/housing_confirmation/housing-2.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/photo/photos-1.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/characteristics/characteristics-1.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/characteristics/characteristics-2.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/characteristics/characteristics-3.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/characteristics/characteristics-4.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/token/confirmationtoken-1.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/token/restart-token-1.sql" relativeToChangelogFile="true"/>
+    <include file="/tables/activity/activity-1.sql" relativeToChangelogFile="true"/>
+
+
+</databaseChangeLog>

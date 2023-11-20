@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html xmlns:th="http://www.thymeleaf.org">
+        <head>
+        <meta charset="UTF-8">
+        Potwierdzenie wynajmu</title>
+</head>
+<body>
+<h2>Witaj <span th:text="${receiverName}"></span>,</h2>
+<p>Uzytkownik <span th:text="${senderName}"></span> <span th:text="${senderSurname}"></span> chce uzyskać od Ciebie wzajemne potwierdzenie:</p>
+<p>Zgadzasz się?</p>
+<p><a th:href="@{${confirmHousingUrlWithToken}}">Tak</a></p>
+<p>W przypadku jeżeli nie znasz osoby, która wysłała Ci tę wiadomość, zignoruj ją.</p>
+<p>Pozdrawiamy,</p>
+<p>MyNewHomie Team</p>
+</body>
+</html>
